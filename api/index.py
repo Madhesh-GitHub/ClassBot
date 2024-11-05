@@ -17,7 +17,7 @@ import urllib.parse
 password = urllib.parse.quote_plus("MADH@2006")  
 
 nlp = spacy.load("en_core_web_sm")
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates", static_folder="../static")
 app.secret_key = 'your_secret_key_here'  # Change this to a secure secret key
 
 # Database configuration
